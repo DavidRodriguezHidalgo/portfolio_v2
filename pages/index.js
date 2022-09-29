@@ -157,10 +157,7 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link
-                href="https://twitter.com/denzilrh90"
-                target="_blank"
-              >
+              <Link href="https://twitter.com/denzilrh90" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
@@ -170,7 +167,16 @@ const Page = () => {
                 </Button>
               </Link>
             </ListItem>
-
+            <ListItem>
+              <Link href="https://cvdrodriguez.vercel.app" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                >
+                  CV
+                </Button>
+              </Link>
+            </ListItem>
           </List>
         </Section>
       </Container>
