@@ -6,6 +6,9 @@ import {
   Image,
   Link,
   SimpleGrid,
+  List,
+  ListItem,
+  Icon,
   useColorModeValue
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
@@ -15,7 +18,12 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import {
+  IoLogoTwitter,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoMail
+} from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -99,6 +107,71 @@ const Page = () => {
             I ♥
           </Heading>
           <Paragraph>Books, Bonsai, Videogames, Photography.</Paragraph>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            How to contact me
+          </Heading>
+          <List>
+            <ListItem>
+              <Link
+                href="https://github.com/DavidRodriguezHidalgo"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @DavidRodriguezHidalgo
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="mailto:david.rodriguezhidalgo@yahoo.com"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoMail} />}
+                >
+                  david.rodriguezhidalgo@yahoo.com
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/david-rodr%C3%ADguez-hidalgo-189a2b67/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  david-rodríguez-hidalgo
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://twitter.com/denzilrh90"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoTwitter} />}
+                >
+                  denzilrh90
+                </Button>
+              </Link>
+            </ListItem>
+
+          </List>
         </Section>
       </Container>
     </Layout>
