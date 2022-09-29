@@ -4,6 +4,8 @@ import {
   Box,
   Heading,
   Image,
+  Link,
+  SimpleGrid,
   useColorModeValue
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
@@ -12,6 +14,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import { GridItem } from '../components/grid-item'
+import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -62,7 +66,7 @@ const Page = () => {
             care, book reading and playing videogames.
           </Paragraph>
           <Box align="center" my={4}>
-            <NextLink href="/works">
+            <NextLink href="/jobs">
               <Button rightIcon={<ChevronRightIcon />} colorScheme={'teal'}>
                 My portfolio
               </Button>

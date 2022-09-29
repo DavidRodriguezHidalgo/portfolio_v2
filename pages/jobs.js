@@ -2,15 +2,15 @@ import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import { WorkGridItem } from '../components/grid-item'
-import ThumbNazaries from '../public/images/works/nazaries_thumb.png'
-import ThumbCamaloon from '../public/images/works/camaloon_thumb.png'
+import ThumbNazaries from '../public/images/jobs/nazaries_thumb.png'
+import ThumbCamaloon from '../public/images/jobs/camaloon_thumb.png'
 
-const Works = () => {
+const Jobs = () => {
   return (
     <Layout>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
-          Works
+          Jobs
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
@@ -37,4 +37,4 @@ const Works = () => {
   )
 }
 
-export default Works
+export default Jobs
