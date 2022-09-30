@@ -69,8 +69,8 @@ const Page = () => {
           </Heading>
           <Paragraph>
             David is a full-stack developer. For backend development I use Ruby
-            on Rails and React.js for frontend. What I like is to learn new
-            things and keep growing my skills. When not online, he loves bonsai
+            on Rails and React.js for frontend. What he likes is to learn new
+            things and keep growing his skills. When not online, he loves bonsai
             care, book reading and playing videogames.
           </Paragraph>
           <Box align="center" my={4}>
@@ -106,7 +106,7 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             I ♥
           </Heading>
-          <Paragraph>Books, Bonsai, Videogames, Photography.</Paragraph>
+          <Paragraph>Books, Bonsai, Videogames.</Paragraph>
         </Section>
 
         <Section delay={0.3}>
