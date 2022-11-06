@@ -101,6 +101,10 @@ const Page = () => {
             <BioYear>2021</BioYear>
             Worked at Camaloon
           </BioSection>
+          <BioSection>
+            <BioYear>2021</BioYear>
+            Worked at FactorialHr
+          </BioSection>
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
@@ -169,10 +173,7 @@ const Page = () => {
             </ListItem>
             <ListItem>
               <Link href="https://cvdrodriguez.vercel.app" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                >
+                <Button variant="ghost" colorScheme="teal">
                   CV
                 </Button>
               </Link>

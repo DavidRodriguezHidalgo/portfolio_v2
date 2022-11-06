@@ -4,6 +4,7 @@ import Layout from '../components/layouts/article'
 import { WorkGridItem } from '../components/grid-item'
 import ThumbNazaries from '../public/images/jobs/nazaries_thumb.png'
 import ThumbCamaloon from '../public/images/jobs/camaloon_thumb.png'
+import ThumbFactorialhr from '../public/images/jobs/factorialhr_thumb.png'
 
 const Jobs = () => {
   return (
@@ -29,6 +30,15 @@ const Jobs = () => {
               thumbnail={ThumbCamaloon}
             >
               Personalized items and gifts.
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id="factorial"
+              title="Factorialhr"
+              thumbnail={ThumbFactorialhr}
+            >
+              All in one Human resources software
             </WorkGridItem>
           </Section>
         </SimpleGrid>
