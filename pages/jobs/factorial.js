@@ -10,7 +10,7 @@ const Work = () => {
     <Layout title="Factorial">
       <Container>
         <Title>
-          Factorial <Badge>2021</Badge>
+          Factorial <Badge>2022</Badge>
         </Title>
         <P>All in one Human resources software</P>
         <List ml={4} my={4}>
