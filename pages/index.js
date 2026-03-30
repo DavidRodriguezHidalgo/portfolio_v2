@@ -82,9 +82,8 @@ const Page = () => {
               <Text as="span" fontWeight="bold">
                 Factorial (2022&ndash;present):
               </Text>{' '}
-              Leading AI strategy for expenses &ndash; built LLM-powered expense
-              skill, now creating bulk submission feature (file upload &rarr;
-              auto-generated expenses)
+              Built LLM-powered expense skill, now creating bulk submission
+              feature (file upload &rarr; auto-generated expenses)
             </ListItem>
             <ListItem>
               <Text as="span" fontWeight="bold">
