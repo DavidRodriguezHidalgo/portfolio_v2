@@ -5,19 +5,18 @@ import {
   Heading,
   Image,
   Link,
-  SimpleGrid,
   List,
   ListItem,
+  UnorderedList,
   Icon,
+  Text,
   useColorModeValue
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
-import { GridItem } from '../components/grid-item'
 import {
   IoLogoTwitter,
   IoLogoGithub,
@@ -29,6 +28,7 @@ const Page = () => {
   return (
     <Layout>
       <Container>
+        {/* Hero / Professional Headline */}
         <Box
           borderRadius="lg"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
@@ -36,14 +36,22 @@ const Page = () => {
           p={3}
           align="center"
         >
-          Hello, I&apos;m a full-stack developer based in Spain!
+          Currently doing AI development for expenses at Factorial
         </Box>
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
-              David Rodríguez
+              David Rodr&iacute;guez
             </Heading>
-            <p>Developer</p>
+            <Text fontSize="md" fontWeight="bold" mt={1}>
+              Senior Full Stack Engineer
+            </Text>
+            <Text
+              fontSize="sm"
+              color={useColorModeValue('gray.600', 'gray.400')}
+            >
+              AI Features &middot; React &middot; Ruby on Rails
+            </Text>
           </Box>
           <Box
             flexShrink={0}
@@ -63,61 +71,92 @@ const Page = () => {
             />
           </Box>
         </Box>
+
+        {/* Experience */}
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            Work
+            Experience
           </Heading>
-          <Paragraph>
-            David is a full-stack developer. For backend development I use Ruby
-            on Rails and React.js for frontend. What he likes is to learn new
-            things and keep growing his skills. When not online, he loves bonsai
-            care, book reading and playing videogames.
-          </Paragraph>
+          <UnorderedList spacing={3} pl={2}>
+            <ListItem>
+              <Text as="span" fontWeight="bold">
+                Factorial (2022&ndash;present):
+              </Text>{' '}
+              Leading AI strategy for expenses &ndash; built LLM-powered expense
+              skill, now creating bulk submission feature (file upload &rarr;
+              auto-generated expenses)
+            </ListItem>
+            <ListItem>
+              <Text as="span" fontWeight="bold">
+                Camaloon (2021&ndash;2022):
+              </Text>{' '}
+              Full-stack developer &ndash; built PrestaShop plugin, embroidery
+              effect tool, and led UX refactor for the Atelier
+            </ListItem>
+            <ListItem>
+              <Text as="span" fontWeight="bold">
+                Nazaries IT (2014&ndash;2021):
+              </Text>{' '}
+              Early React adopter, mentored 3 juniors, led multiple client
+              projects (NGA, Amnist&iacute;a Internacional)
+            </ListItem>
+          </UnorderedList>
           <Box align="center" my={4}>
             <NextLink href="/jobs">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme={'teal'}>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My portfolio
               </Button>
             </NextLink>
           </Box>
         </Section>
+
+        {/* Bio Timeline */}
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>
           <BioSection>
             <BioYear>1990</BioYear>
-            Born in Granada, Spain.
+            Born in Granada, Spain
           </BioSection>
           <BioSection>
             <BioYear>2014</BioYear>
-            Completed Computer Science Degree by Granada&apos;s University.
+            Computer Science Degree, University of Granada
           </BioSection>
           <BioSection>
-            <BioYear>2014</BioYear>
-            Worked at Nazaries IT
+            <BioYear>2014&ndash;2021</BioYear>
+            Nazaries IT &ndash; from intern to lead developer
           </BioSection>
           <BioSection>
-            <BioYear>2021</BioYear>
-            Worked at Camaloon
+            <BioYear>2021&ndash;2022</BioYear>
+            Camaloon &ndash; full-stack developer
           </BioSection>
           <BioSection>
-            <BioYear>2022</BioYear>
-            Worked at FactorialHr
+            <BioYear>2022&ndash;present</BioYear>
+            Factorial &ndash; senior full-stack engineer, AI lead
           </BioSection>
-        </Section>
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            I ♥
-          </Heading>
-          <Paragraph>Books, Bonsai, Videogames.</Paragraph>
         </Section>
 
+        {/* Contact */}
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            How to contact me
+            Contact
           </Heading>
           <List>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/david-rodr%C3%ADguez-hidalgo-189a2b67/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  david-rodr&iacute;guez-hidalgo
+                </Button>
+              </Link>
+            </ListItem>
             <ListItem>
               <Link
                 href="https://github.com/DavidRodriguezHidalgo"
@@ -147,20 +186,6 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link
-                href="https://www.linkedin.com/in/david-rodr%C3%ADguez-hidalgo-189a2b67/"
-                target="_blank"
-              >
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<Icon as={IoLogoLinkedin} />}
-                >
-                  david-rodríguez-hidalgo
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
               <Link href="https://twitter.com/denzilrh90" target="_blank">
                 <Button
                   variant="ghost"
@@ -171,14 +196,52 @@ const Page = () => {
                 </Button>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link href="https://cvdrodriguez.vercel.app" target="_blank">
-                <Button variant="ghost" colorScheme="teal">
-                  CV
-                </Button>
-              </Link>
-            </ListItem>
           </List>
+          <Box align="center" my={4}>
+            <Link
+              href="https://cvdrodriguez.vercel.app"
+              target="_blank"
+              style={{ textDecoration: 'none' }}
+            >
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                View detailed CV
+              </Button>
+            </Link>
+          </Box>
+        </Section>
+
+        {/* Blog */}
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            Blog
+          </Heading>
+          <Text mb={4}>
+            I write about things I learn, ideas I explore, and what I find
+            interesting. Check out my blog on Fika.
+          </Text>
+          <Box align="center">
+            <Link
+              href="https://davidrodh.fika.bar/"
+              target="_blank"
+              style={{ textDecoration: 'none' }}
+            >
+              <Button rightIcon={<ExternalLinkIcon />} colorScheme="teal">
+                Read my blog
+              </Button>
+            </Link>
+          </Box>
+        </Section>
+
+        {/* I love - de-emphasized */}
+        <Section delay={0.4}>
+          <Text
+            fontSize="sm"
+            color={useColorModeValue('gray.500', 'gray.500')}
+            textAlign="center"
+            mt={4}
+          >
+            I also love books, bonsai, and videogames.
+          </Text>
         </Section>
       </Container>
     </Layout>

@@ -25,7 +25,7 @@ const LinkItem = ({ href, path, children }) => {
         p={2}
         bg={active ? 'grassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
-        style={{borderRadius: "5px"}}
+        style={{ borderRadius: '5px' }}
       >
         {children}
       </Link>
@@ -68,6 +68,15 @@ const Navbar = props => {
           <LinkItem href="/jobs" path={path}>
             Jobs
           </LinkItem>
+          <Link
+            href="https://davidrodh.fika.bar/"
+            target="_blank"
+            p={2}
+            style={{ borderRadius: '5px', textDecoration: 'none' }}
+            color={useColorModeValue('gray200', 'whiteAlpha.900')}
+          >
+            Blog
+          </Link>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
@@ -86,6 +95,13 @@ const Navbar = props => {
                 <NextLink href="/jobs" passHref>
                   <MenuItem as={Link}>Jobs</MenuItem>
                 </NextLink>
+                <Link
+                  href="https://davidrodh.fika.bar/"
+                  target="_blank"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <MenuItem>Blog</MenuItem>
+                </Link>
               </MenuList>
             </Menu>
           </Box>
